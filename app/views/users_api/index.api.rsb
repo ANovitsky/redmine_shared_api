@@ -1,0 +1,13 @@
+api.array :users do
+  @users.each do |user|
+    api.user do
+      api.id         user.id
+      api.login      user.login
+      api.firstname  user.firstname
+      api.lastname   user.lastname
+      api.mail       user.mail
+      api.created_on user.created_on
+      api.last_login_on user.last_login_on
+    end
+  end
+end

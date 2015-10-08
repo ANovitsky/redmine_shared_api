@@ -1,0 +1,3 @@
+api.settings do
+  api.rest_api_enabled @config.rest_api_enabled
+end
