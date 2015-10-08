@@ -1,12 +1,13 @@
-# Redmine Shared API
+Redmine Shared API
+-------
 
-This is a plugin share some endpoints of API for [Redmine Outlook Add-in](http://www.ahausoftware.com/redmine-outlook).
+This is a plugin share some endpoints of API.
 
 ### New endpoints for NON-admin users
 
-* [GET] /shared/custom_fields.xml
-* [GET] /shared/users.xml
-* [GET] /shared/settings.xml
+* [GET] /shared/custom_fields.xml | .json
+* [GET] /shared/users.xml | .json
+* [GET] /shared/settings.xml | .json
 
 ```
 <settings>
@@ -20,7 +21,7 @@ This is a plugin share some endpoints of API for [Redmine Outlook Add-in](http:/
 
 ### New endpoints for NON authorized (public) users:
 
-* [GET] /public/settings.xml
+* [GET] /public/settings.xml | .json
 
 ```
 <settings>
@@ -28,6 +29,12 @@ This is a plugin share some endpoints of API for [Redmine Outlook Add-in](http:/
 </settings>
 ```
 
-##### Compatible with:	Redmine 4.0.x, 3.2.x, 3.1.x, 3.0.x, 2.6.x, 2.5.x
+LICENSE
+-------
+This plugin is released under the GPL v2 license. See
+LICENSE for more information.
 
-Powered by [www.ahausoftware.com](http://www.ahausoftware.com/redmine-outlook)  :+1:
+
+Compatible with:	Redmine 4.0.x, 3.2.x, 3.1.x, 3.0.x, 2.6.x, 2.5.x
+
+Powered by [www.ahausoftware.com](http://www.ahausoftware.com/redmine-outlook) 
