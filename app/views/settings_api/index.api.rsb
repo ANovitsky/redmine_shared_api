@@ -1,6 +1,6 @@
 api.settings do
   api.text_formatting @config.text_formatting  
-  api.gravatar_enabled @config.gravatar_enabled
+  api.gravatar_enabled @config.gravatar_enabled?
   api.gravatar_default @config.gravatar_default
   api.version Redmine::Info.versioned_name  
   api.environment Redmine::Info.environment 
