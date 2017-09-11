@@ -21,6 +21,9 @@ api.array :custom_fields do
           values.each do |label, value|
             api.possible_value do
               api.value value || label
+              if field.format.class.name.demodulize == 'EnumerationFormat'
+                  api.label label
+              end
             end
           end
         end
