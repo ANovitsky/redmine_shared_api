@@ -8,6 +8,7 @@ This is a plugin share some endpoints of API.
 * [GET] /shared/custom_fields.xml | .json
 * [GET] /shared/users.xml | .json
 * [GET] /shared/settings.xml | .json
+* [GET] /shared/projects.xml | .json
 
 ```
 <settings>
@@ -45,4 +46,4 @@ License
 This plugin is released under the GPL v2 license. See
 LICENSE for more information.
 
-Powered by [www.ahausoftware.com](http://www.ahausoftware.com/redmine-outlook) 
+Powered by [www.ahausoftware.com](https://www.ahausoftware.com/redmine-outlook) 
