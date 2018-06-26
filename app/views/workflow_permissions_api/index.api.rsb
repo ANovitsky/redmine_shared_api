@@ -1,0 +1,59 @@
+api.permissions do
+  api.array :fields do
+    @fields.each do |field|
+      api.field 'id' => field[0], 'name' => field[1]
+    end
+  end
+
+  api.array :custom_fields do
+    @custom_fields.each do |custom_field|
+      api.custom_field do
+          api.id custom_field.id
+          api.type custom_field.type
+          api.name custom_field.name
+          api.customized_type custom_field.class.customized_class.name.underscore if custom_field.class.customized_class
+          api.field_format custom_field.field_format
+          values = custom_field.possible_values
+          if values.present?
+            api.array :possible_values do
+              values.each do |label, value|
+                api.possible_value :value => value || label, :label => label
+              end
+            end
+          end
+          api.regexp custom_field.regexp
+          api.min_length custom_field.min_length
+          api.max_length custom_field.max_length
+          api.is_required custom_field.is_required?
+          api.is_for_all custom_field.is_for_all
+          api.is_filter custom_field.is_filter?
+          api.position custom_field.position
+          api.searchable custom_field.searchable
+          api.default_value custom_field.default_value
+          api.editable custom_field.editable
+          api.visible custom_field.visible?
+          api.multiple custom_field.multiple?
+          api.format_store custom_field.format_store
+          api.description custom_field.description.squish
+        end
+    end
+  end
+
+  api.array :statuses do
+    @statuses.each do |status|
+      api.status do
+        api.status_id status.id
+        api.name status.name
+        api.is_closed status.is_closed
+        api.position status.position
+        api.default_done_ratio status.default_done_ratio
+        api.array :permissions do
+          @permissions[status.id].each do |perm|
+            api.permission :field => perm[0], :permission => perm[1][0]
+          end
+        end
+      end
+    end
+  end
+
+end

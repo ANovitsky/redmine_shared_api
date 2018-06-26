@@ -1,0 +1,5 @@
+api.array :transitions do
+  @workflow.each do |wf|
+    api.transition :old_status_id => wf.old_status_id, :new_status_id => wf.new_status_id
+  end
+end

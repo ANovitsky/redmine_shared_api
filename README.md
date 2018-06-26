@@ -10,6 +10,9 @@ This is a plugin share some endpoints of API.
 * [GET] /shared/settings.xml | .json
 * [GET] /shared/projects.xml | .json
 
+* [GET] /shared/workflow/transitions.xml?role_id={id}&tracker_id={id} | .json
+* [GET] /shared/workflow/permissions.xml?role_id={id}&tracker_id={id} | .json
+
 ```
 <settings>
     <text_formatting>textile</text_formatting>
