@@ -1,4 +1,4 @@
 api.settings do
   api.rest_api_enabled @config.rest_api_enabled?
-  api.plugin_version '0.0.5'
+  api.plugin_version '0.0.6'
 end

@@ -7,6 +7,21 @@ This is a plugin share some endpoints of API.
 
 * [GET] /shared/custom_fields.xml | .json
 * [GET] /shared/users.xml | .json
+```
+<users type="array">
+	<user>
+		<id>1</id>
+		<login>user</login>
+		<firstname>Alex</firstname>
+		<lastname>Black</lastname>
+		<mail>anton@ahausoftware.com</mail>
+		<created_on>2015-03-18T00:08:44Z</created_on>
+		<last_login_on>2016-03-31T15:18:41Z</last_login_on>
+		<avatar_url>http://www.gravatar.com/avatar/f1f7086b63fa35b7588614516fade808?rating=PG&size=50&default=monsterid</avatar_url>
+	</user>
+</users>
+```
+
 * [GET] /shared/settings.xml | .json
 * [GET] /shared/projects.xml | .json
 

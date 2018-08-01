@@ -16,5 +16,5 @@ class UsersApiController < ApplicationController
         Setting.text_formatting
     end      
   end
-  
+
 end
