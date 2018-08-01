@@ -5,8 +5,10 @@ This is a plugin share some endpoints of API.
 
 ### New endpoints for NON-admin users
 
-* [GET] /shared/custom_fields.xml | .json
-* [GET] /shared/users.xml | .json
+#### [GET] /shared/custom_fields.xml | .json
+#### [GET] /shared/users.xml | .json
+
+##### Response 
 ```
 <users type="array">
 	<user>
@@ -21,13 +23,16 @@ This is a plugin share some endpoints of API.
 	</user>
 </users>
 ```
+##### Comments
+	login - display only for admin or if the user is current
 
-* [GET] /shared/settings.xml | .json
-* [GET] /shared/projects.xml | .json
+	mail	- display only for admin or if the user swith off 'Hide my email address' in Preferences
 
-* [GET] /shared/workflow/transitions.xml?role_id={id}&tracker_id={id} | .json
-* [GET] /shared/workflow/permissions.xml?role_id={id}&tracker_id={id} | .json
+	avatar_url - display if option 'Use Gravatar user icons' is enabled in Settings
 
+	
+#### [GET] /shared/settings.xml | .json
+##### Response 
 ```
 <settings>
     <text_formatting>textile</text_formatting>
@@ -38,13 +43,19 @@ This is a plugin share some endpoints of API.
 </settings>
 ```
 
+#### [GET] /shared/projects.xml | .json
+
+#### [GET] /shared/workflow/transitions.xml?role_id={id}&tracker_id={id} | .json
+#### [GET] /shared/workflow/permissions.xml?role_id={id}&tracker_id={id} | .json
+
 ### New endpoints for NON authorized (public) users:
 
-* [GET] /public/settings.xml | .json
-
+#### [GET] /public/settings.xml | .json
+##### Response 
 ```
 <settings>
 	<rest_api_enabled>true</rest_api_enabled>
+	<plugin_version>0.0.6</plugin_version>
 </settings>
 ```
 
