@@ -1,6 +1,6 @@
 class SettingsApiController < ApplicationController
   
-  before_filter :require_login
+  before_action :require_login
   accept_api_auth :index
   
   def index    

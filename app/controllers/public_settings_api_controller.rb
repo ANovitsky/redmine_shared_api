@@ -1,6 +1,6 @@
 class PublicSettingsApiController < ApplicationController
   
-  skip_before_filter :check_if_login_required, :check_password_change
+  skip_before_action :check_if_login_required, :check_password_change
 
   def index    
     respond_to do |format|      
