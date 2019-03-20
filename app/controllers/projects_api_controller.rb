@@ -1,6 +1,6 @@
 class ProjectsApiController < ApplicationController
 
-  before_action :require_login
+  before_filter :require_login
   accept_api_auth :index
   
   helper :custom_fields
